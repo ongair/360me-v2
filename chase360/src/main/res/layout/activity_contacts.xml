@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1e4a9a"
+            android:paddingBottom="5dp" >
+
+            <ImageView
+                android:id="@+id/product_app_logo"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/icon_chase_360_40" />
+
+            <View
+                android:id="@+id/vertical_sep"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_below="@+id/product_app_logo"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/app_pure_white" />
+
+            <TextView
+                android:id="@+id/product_app_logo_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/product_app_logo"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/product_app_logo"
+                android:text="CHASE BANK"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/app_pure_white" />
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/relTitle"
+                android:layout_marginTop="5dp"
+                android:background="@color/app_pure_white" />
+
+            <EditText
+                android:id="@+id/contact_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_line"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/app_pure_white"
+                android:drawableLeft="@drawable/icon_search"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint="@string/search_contact"
+                android:minHeight="35dp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/app_white" >
+            </EditText>
+
+            <RelativeLayout
+                android:id="@+id/relTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vertical_sep" >
+
+                <TextView
+                    android:id="@+id/product_app_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="source-sans-pro"
+                    android:text="Contacts - Phonebook"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/app_pure_white" />
+
+                <ImageView
+                    android:id="@+id/product_app_back"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14dp"
+                    android:background="@drawable/new_holder_selector"
+                    android:src="@drawable/icon_contacts_back" />
+				
+                <ImageView
+                    android:id="@+id/product_app_add"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="2dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/new_holder_selector"
+                    android:src="@drawable/icon_add_products_40" />
+				
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/contact_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:fadeScrollbars="true"
+            android:fastScrollEnabled="true"
+            android:scrollbarSize="30dp"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb"
+            android:scrollbarTrackVertical="@drawable/scrollbar_vertical_track"
+            tools:listitem="@layout/contact_list_holder" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/View02"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#d1d2d4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#fcfcfc"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lead_section_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:background="@drawable/lead_nav_selector"
+                android:clickable="true"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/tab_notifications_icon"
+                android:focusable="true"
+                android:gravity="center_horizontal"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/notification"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#757575"
+                android:textSize="12sp" >
+            </TextView>
+
+            <View
+                android:id="@+id/vertical_sep"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="#c8cacc" />
+
+            <TextView
+                android:id="@+id/lead_section_add_lead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:background="@drawable/lead_nav_selector"
+                android:clickable="true"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/tab_add_lead_icon"
+                android:focusable="true"
+                android:gravity="center_horizontal"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/add_lead"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#757575"
+                android:textSize="12sp" >
+            </TextView>
+
+            <View
+                android:id="@+id/View01"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="#c8cacc" />
+
+            <TextView
+                android:id="@+id/lead_section_my_leads"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:background="@drawable/lead_nav_selector"
+                android:clickable="true"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/tab_home_icon"
+                android:focusable="true"
+                android:gravity="center_horizontal"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="HOME"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#757575"
+                android:textSize="12sp" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lead_notification_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="36dp"
+        android:layout_marginLeft="80dp"
+        android:background="@drawable/image_shape_noti"
+        android:paddingBottom="4dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="4dp"
+        android:text="3"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/app_pure_white"
+        android:textStyle="bold" />
+
+</FrameLayout>

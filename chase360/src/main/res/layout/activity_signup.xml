@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_app" >
+
+    <LinearLayout
+        android:id="@+id/linearVertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <ImageView
+                android:id="@+id/app_icons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/image_for_splash_screen"
+                android:src="@drawable/icon_360_me_180" />
+
+            <TextView
+                android:id="@+id/signup_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/app_icons"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:fontFamily="source-sans-pro"
+                android:text="SignUp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/login_btn_text"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/signup_photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/signup_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/signup_shape"
+                android:baselineAlignBottom="true"
+                android:clickable="true"
+                android:onClick="changeProfilePhoto"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_upload_32" />
+
+            <TextView
+                android:id="@+id/dialog_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signup_photo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="Take / Upload Your Photo"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/linear_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dialog_txt"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:ems="10"
+                    android:hint="Your name"
+                    android:inputType="textPersonName"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/user_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:prompt="@string/company" />
+
+                <TextView
+                    android:id="@+id/dialog_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="Select Department"
+                    android:textSize="15sp" />
+				
+                <Spinner
+                    android:id="@+id/user_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical"
+                    android:prompt="@string/company" />
+            </LinearLayout>
+			
+            <TextView
+                android:id="@+id/user_submit_lead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_details"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/act_btn_login"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="JOIN THE CHASE FAMILY"
+                android:textColor="@color/app_pure_white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_submit_lead"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="By registering, I accept the\n Terms of Service and Privacy Policy"
+                android:textColor="@color/login_btn_text" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

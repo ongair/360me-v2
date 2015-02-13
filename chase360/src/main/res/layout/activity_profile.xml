@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearVertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_app"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1e4a9a"
+        android:paddingBottom="10dp" >
+
+        <ImageView
+            android:id="@+id/product_app_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/vertical_sep"
+            android:layout_marginBottom="-2dp"
+            android:layout_marginRight="14dp"
+            android:visibility="invisible"
+            android:background="@drawable/new_holder_selector"
+            android:src="@drawable/icon_add_products_40" />
+
+        <ImageView
+            android:id="@+id/product_app_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/product_app_add"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/icon_chase_360_40" />
+
+        <View
+            android:id="@+id/vertical_sep"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_below="@+id/product_app_logo"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/app_pure_white" />
+
+        <TextView
+            android:id="@+id/profile_app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/product_app_add"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="source-sans-pro"
+            android:text="My Profile"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/app_pure_white" />
+
+        <TextView
+            android:id="@+id/profile_logo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/product_app_logo"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/product_app_logo"
+            android:text="360 Me"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/app_pure_white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+        <ImageView
+            android:id="@+id/signup_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/signup_shape"
+            android:baselineAlignBottom="true"
+            android:clickable="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_upload_32" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup_photo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/app_profile_title"
+            android:textColorHint="@color/app_profile_title"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/profile_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_name"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/app_profile_role"
+            android:textSize="13sp" />
+        
+        <TextView
+            android:id="@+id/profile_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_role"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/app_profile_role"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/app_profile_menu_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/lead_section_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:background="@drawable/lead_nav_selector"
+            android:clickable="true"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/tab_notifications_icon"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="@string/notification"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/login_btn_text"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/lead_section_add_lead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:background="@drawable/lead_nav_selector"
+            android:clickable="true"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/tab_add_lead_icon"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="@string/add_lead"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/login_btn_text"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/lead_section_my_leads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:background="@drawable/lead_nav_selector"
+            android:clickable="true"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/tab_home_icon"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:text="MY LEADS"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/login_btn_text"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/app_profile_menu_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="-2dip"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:id="@+id/linearMenuComment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/imageMenuComment"
+                android:layout_width="24dip"
+                android:layout_height="24dip"
+                android:layout_gravity="top|left"
+                android:layout_marginLeft="35dip"
+                android:background="@drawable/profile_menuselector" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearMenuPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <Button
+                android:id="@+id/imageMenuPhone"
+                android:layout_width="24dip"
+                android:layout_height="24dip"
+                android:layout_marginLeft="5dip"
+                android:layout_weight="25"
+                android:background="@drawable/profile_menuselector" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearMenuNotis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <Button
+                android:id="@+id/imageMenuNotis"
+                android:layout_width="24dip"
+                android:layout_height="24dip"
+                android:layout_marginLeft="5dip"
+                android:layout_weight="25"
+                android:background="@drawable/profile_menuselector" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearMenuStar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <Button
+                android:id="@+id/imageMenuStar"
+                android:layout_width="24dip"
+                android:layout_height="24dip"
+                android:layout_marginLeft="5dip"
+                android:layout_weight="25"
+                android:background="@drawable/profile_menuselector" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dip"
+        android:divider="@color/app_white"
+        android:dividerHeight="0.7dp"
+        tools:listitem="@layout/timeline_item_headline" />
+
+</LinearLayout>

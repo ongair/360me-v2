@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_pure_white" >
+	
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="#1e4a9a"
+        android:paddingBottom="10dp" >
+		
+        <ImageView
+            android:id="@+id/product_app_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/vertical_sep"
+            android:layout_marginBottom="-2dp"
+            android:layout_marginLeft="14dp"
+            android:background="@drawable/new_holder_selector"
+            android:src="@drawable/icon_back_arrow_line_40" />
+
+        <ImageView
+            android:id="@+id/product_app_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/vertical_sep"
+            android:layout_marginBottom="-2dp"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/new_holder_selector"
+            android:src="@drawable/icon_add_products_40" />
+
+        <ImageView
+            android:id="@+id/product_app_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/product_app_add"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/icon_chase_360_40" />
+
+        <View
+            android:id="@+id/vertical_sep"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_below="@+id/product_app_logo"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/app_pure_white" />
+
+        <TextView
+            android:id="@+id/product_app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/product_app_add"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="source-sans-pro"
+            android:text="Add Leads"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/app_pure_white" />
+
+        <TextView
+            android:id="@+id/product_app_logo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/product_app_logo"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/product_app_logo"
+            android:text="CHASE BANK"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/app_pure_white" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/background_app" >
+			
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="70dp" >
+			
+            <LinearLayout
+                android:id="@+id/LinearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+					
+                <LinearLayout
+                    android:id="@+id/layout_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+					
+                    <TextView
+                        android:id="@+id/product_app_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/leads_summary_advice"
+                        android:textColor="@color/login_btn_text"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/textCompany"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/panel_white_shape"
+                        android:ems="10"
+                        android:hint="Selected Company"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:editable="false"
+                        android:textSize="15sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerBranch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:spinnerMode="dialog" />
+
+                    <EditText
+                        android:id="@+id/textProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/panel_white_shape"
+                        android:ems="10"
+                        android:hint="Selected Product"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:editable="false"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_manual"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/textManual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Enter Contact Details"
+                            android:textColor="@color/login_btn_text"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/textName"
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/panel_white_shape"
+                            android:ems="10"
+                            android:hint="Contact Name"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/textPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/panel_white_shape"
+                            android:ems="10"
+                            android:hint="Phone Number"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/adddet_details_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/new_holder_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="15sp"
+                        android:text="@string/add_lead_desc_text"
+                        android:textColor="@color/login_btn_text" />
+
+                    <EditText
+                        android:id="@+id/addet_emailaddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/panel_white_shape"
+                        android:ems="10"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/adddet_additional_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/panel_white_shape"
+                        android:ems="10"
+                        android:gravity="top|left"
+                        android:hint="@string/additional_details_or_comments"
+                        android:inputType="textMultiLine"
+                        android:minLines="5"
+                        android:padding="10dp"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/add_lead_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/act_btn_login"
+                    android:paddingBottom="0dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="0dp"
+                    android:text="@string/add_lead"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/app_pure_white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="10dp"
+            android:background="#fcfcfc"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/lead_section_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:background="@drawable/lead_nav_selector"
+                android:clickable="true"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/tab_notifications_icon"
+                android:focusable="true"
+                android:gravity="center_horizontal"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/notification"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/login_btn_text"
+                android:textSize="12sp" >
+            </TextView>
+
+            <View
+                android:id="@+id/vertical_sep"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="#c8cacc" />
+
+            <TextView
+                android:id="@+id/lead_section_add_lead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:background="@drawable/lead_nav_selector"
+                android:clickable="true"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/tab_add_lead_icon"
+                android:focusable="true"
+                android:gravity="center_horizontal"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="@string/add_lead"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/login_btn_text"
+                android:textSize="12sp" >
+            </TextView>
+
+            <View
+                android:id="@+id/View01"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="#c8cacc" />
+
+            <TextView
+                android:id="@+id/lead_section_my_leads"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:background="@drawable/lead_nav_selector"
+                android:clickable="true"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/tab_home_icon"
+                android:focusable="true"
+                android:gravity="center_horizontal"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:text="HOME"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/login_btn_text"
+                android:textSize="12sp" >
+            </TextView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lead_notification_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="36dp"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/image_shape_noti"
+            android:paddingBottom="4dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="4dp"
+            android:text="3"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/app_pure_white"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</FrameLayout>

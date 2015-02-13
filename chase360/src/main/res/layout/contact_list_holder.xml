@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_holder_selection"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingBottom="@dimen/activity_list_vertical_margin"
+    android:paddingLeft="@dimen/activity_list_horizontal_margin"
+    android:paddingRight="@dimen/activity_list_horizontal_margin"
+    android:paddingTop="@dimen/activity_list_vertical_margin" >
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <QuickContactBadge
+            android:id="@android:id/icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/image_shape"
+            android:clickable="false"
+            android:contentDescription="@string/contact_icon"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:scaleType="centerCrop"
+            android:src="@drawable/contact_holder" />
+
+        <LinearLayout
+            android:id="@+id/linear_details_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@android:id/icon"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="source-sans-pro"
+                android:textColor="#50575d" />
+
+            <TextView
+                android:id="@+id/contact_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="source-sans-pro"
+                android:text=""
+                android:textColor="@color/app_contacts_holder_text" />
+
+            <TextView
+                android:id="@+id/contact_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/contact_icon_more"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/contact_more"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/icon_contacts_right" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel"
+        android:layout_marginTop="3dp"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/vertical_sep"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/app_pure_white" />
+
+        <LinearLayout
+            android:id="@+id/linear_icons_contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <ImageView
+                android:id="@+id/imageViewEmail"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.2"
+                android:src="@drawable/icon_contact_msg_email" />
+
+            <ImageView
+                android:id="@+id/imageViewTwitter"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.2"
+                android:src="@drawable/icon_contact_twitter" />
+
+            <ImageView
+                android:id="@+id/imageViewAdd"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.2"
+                android:src="@drawable/icon_contact_add" />
+
+            <ImageView
+                android:id="@+id/imageViewShare"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.2"
+                android:src="@drawable/icon_contact_share" />
+
+            <ImageView
+                android:id="@+id/imageViewPoints"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.2"
+                android:src="@drawable/icon_contact_chase_points" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
